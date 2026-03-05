@@ -1,15 +1,16 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import PauseOnHover from "./components/slider/PauseOnHover";
-import Responsive from "./components/slider/Responsive";
+"use client";
 
-export default function Home() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './about/page';
+import Main from './components/Main';
+
+export default function App() {
   return (
-    <div className="">
-      {/* <Header/>
-      <PauseOnHover/>
-      <Footer/> */}
-      <Responsive/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }

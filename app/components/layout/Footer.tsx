@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../styles/footer.css/footer.module.scss";
+import styles from "../../styles/footer.css/footer.module.scss";
 import {
   FaInstagram,
   FaTiktok,

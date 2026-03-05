@@ -5,7 +5,7 @@ import { SlBasketLoaded } from "react-icons/sl";
 import { BiSupport } from "react-icons/bi";
 import { IoMdSearch } from "react-icons/io";
 import { IoPersonOutline,IoPerson } from "react-icons/io5";
-import styles from "../styles/header.css/Header.module.scss";
+import styles from "../../styles/header.css/Header.module.scss";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart,FaBars } from "react-icons/fa6";
 
