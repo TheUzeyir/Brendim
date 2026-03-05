@@ -9,3 +9,7 @@ body {
     padding:0 50px;
 
 }
+
+  .slick-slide {
+    padding: 0 0.5rem; 
+  }

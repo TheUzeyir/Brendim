@@ -4,12 +4,10 @@ import { CiHeart } from "react-icons/ci";
 import { SlBasketLoaded } from "react-icons/sl";
 import { BiSupport } from "react-icons/bi";
 import { IoMdSearch } from "react-icons/io";
-import { IoPersonOutline } from "react-icons/io5";
+import { IoPersonOutline,IoPerson } from "react-icons/io5";
 import styles from "../styles/header.css/Header.module.scss";
 import { FaShoppingCart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa6";
-import { IoPerson } from "react-icons/io5";
-import { FaBars } from "react-icons/fa6";
+import { FaHeart,FaBars } from "react-icons/fa6";
 
 export default function Header() {
 

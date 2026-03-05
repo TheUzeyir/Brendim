@@ -1,0 +1,319 @@
+@charset "UTF-8";
+.footer {
+  margin-top: 40px;
+}
+
+.footer_main_title {
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.footer_bottom_container {
+  background: #F4F4F4;
+  margin-top: 20px;
+}
+
+.footer_bottom {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.footer_bottom_item h2 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer_bottom_item p {
+  font-size: 14px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.footer_bottom_item p:hover {
+  color: red;
+}
+
+.footer_bottom_item_box h2 {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.footer_bottom_item_links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer_sosialBox {
+  display: flex;
+  gap: 20px;
+}
+
+/* From Uiverse.io by 0800Gonza */
+.card {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.footer_main_title {
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+/* Card container for social icons */
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 25px 0;
+}
+
+/* Social icons */
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  color: white; /* react-icons üçün */
+}
+
+.containerOne:hover {
+  background-color: #d62976;
+}
+
+.containerTwo:hover {
+  background-color: #00acee;
+}
+
+.containerThree:hover {
+  background-color: #0072b1;
+}
+
+.containerFour:hover {
+  background-color: #128c7e;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+}
+
+.socialSvg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor; /* react-icons rəngini currentColor-dan alır */
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* App Store button */
+.appstoreButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 12px;
+  border-radius: 15px;
+  border: 3px solid rgb(189, 189, 189);
+  background-color: rgb(15, 15, 15);
+  cursor: pointer;
+  box-shadow: 0px 0px 100px -30px rgb(255, 255, 255);
+  transition: all 0.3s;
+  color: white; /* icon və mətn üçün */
+}
+
+.appstoreIcon {
+  width: 35px;
+  height: 40px;
+  fill: currentColor; /* react-icon rəngi */
+}
+
+.buttonText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.topText {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bottomText {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.appstoreButton:hover {
+  background-color: rgb(236, 236, 236);
+  border: 3px solid rgb(138, 138, 138);
+  color: black; /* icon və mətn hover zamanı */
+}
+
+.playstoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playstoreButton:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.playstoreIcon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor; /* İkon rəngi hover ilə dəyişir */
+}
+
+.playstoreTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.playstoreText1 {
+  font-size: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.playstoreText2 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.countryBox {
+  position: relative;
+  width: 180px;
+  border: 1px solid #ddd;
+}
+
+.countryHeader {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.countryDropdown {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countryItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.countryItem:hover {
+  background: #f3f3f3;
+}/*# sourceMappingURL=footer.module.css.map */
