@@ -2,7 +2,7 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './about/page';
-import Main from './components/Main';
+import Main from './main/Main';
 
 export default function App() {
   return (
