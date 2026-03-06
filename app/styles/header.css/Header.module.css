@@ -13,6 +13,7 @@
 
 .header_top_left {
   font-size: 40px;
+  cursor: pointer;
 }
 
 .header_top_search {
@@ -77,4 +78,30 @@
 .header_bottom_Rightitem {
   cursor: pointer;
   color: red;
+}
+
+.search_results {
+  position: absolute;
+  background: white;
+  width: 49.5%;
+  left: 17.4%;
+  height: 400px;
+  overflow-y: scroll;
+  top: 10%;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.search_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search_item:hover {
+  background: #f5f5f5;
 }/*# sourceMappingURL=Header.module.css.map */
