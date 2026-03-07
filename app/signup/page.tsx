@@ -1,12 +1,13 @@
+'use client';
 import React, { useEffect, useState } from "react";
 import styles from "../styles/registration/Registration.module.scss";
-import { validate } from "./validate";
+import { validate } from "../utils/validate";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useTranslation } from "react-i18next";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { useRouter } from 'next/navigation';
 
 type FormKeys =
   | "name"
@@ -37,7 +38,6 @@ type InputType = {
 
 const SignUp: React.FC = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   const [data, setData] = useState<FormData>({
     name: "",
@@ -50,6 +50,11 @@ const SignUp: React.FC = () => {
 
   const [errors, setErrors] = useState<ErrorsType>({});
   const [touched, setTouched] = useState<TouchedType>({});
+  const router = useRouter();
+
+  const goToLogin = () => {
+    router.push('/login'); 
+  };
 
   useEffect(() => {
     setErrors(validate(data, "signUp"));
@@ -156,7 +161,7 @@ const SignUp: React.FC = () => {
     <div className={styles.container}>
       <p
         className={styles.navigateText}
-        onClick={() => navigate("/")}
+        onClick={goToLogin}
       >
         <MdKeyboardArrowLeft />
       </p>
@@ -224,7 +229,7 @@ const SignUp: React.FC = () => {
           <div>
             <span>
               {t("signInHaveAcc")}
-              <Link to="/login">{t("signInLoginText")}</Link>
+              <p onClick={goToLogin}>{t("signInLoginText")}</p>
             </span>
           </div>
 

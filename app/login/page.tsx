@@ -1,16 +1,20 @@
+"use client";
 import React, { useState } from "react";
 // import userIcon from "../../img/user.svg";
 // import passwordIcon from "../../img/password.svg";
 import styles from "../styles/registration/Registration.module.scss";
-import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  const router = useRouter();
+    const goToMain = () => {
+    router.push('/'); 
+  };
 
   const [data, setData] = useState({
     userName: "",
@@ -61,7 +65,7 @@ export default function Login() {
           localStorage.setItem("authToken", token);
         }
 
-        navigate("/");
+        goToMain();
       } else {
         errorMessages("Kullanıcı bulunamadı.");
       }
@@ -76,7 +80,7 @@ export default function Login() {
       <p
         className={styles.navigateText}
         onClick={() => {
-          navigate("/");
+          goToMain();
         }}
       >
         <MdKeyboardArrowLeft />
@@ -123,7 +127,7 @@ export default function Login() {
           <div>
             <span>
               {t("loginPageNotAccText")}
-              <Link to="/signup">{t("loginPageCteateAccText")}</Link>
+              <a onClick={goToMain}>{t("loginPageCteateAccText")}</a>
             </span>
           </div>
         </form>

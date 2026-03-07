@@ -3,8 +3,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './about/page';
 import Main from './main/Main';
-import Login from './registration/page';
-import SignUp from './registration/signIn';
+import Login from './login/page';
+import SignUp from './signup/page';
 
 export default function App() {
   return (
